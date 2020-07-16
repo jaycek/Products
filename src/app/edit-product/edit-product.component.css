@@ -1,0 +1,16 @@
+small{
+    color:red;
+}
+
+#main{
+
+    background-image: url('../../assets/prd-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+ }
+
+ td{
+    color:white;
+ }
+ 

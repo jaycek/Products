@@ -1,0 +1,21 @@
+#main{
+
+   height:600px;
+   background-image: url('../../assets/prd-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+tbody,thead{
+    color:white;
+}
+
+.card-header{
+    font-size: xx-large;
+    color:white;
+    
+}
+.table-responsive{
+    border:1px solid white;
+}

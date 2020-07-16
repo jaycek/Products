@@ -1,0 +1,64 @@
+<div class="card" id="main">
+    <form [formGroup]="editProductForm" (ngSubmit)="saveProduct()">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <small >Note:All fields are mandatory</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Product Id:</label></td>
+                        <td><input type="number" formControlName="productId"  [class.is-invalid] = "editProductForm.get('productId').invalid && editProductForm.get('productId').touched" class="form-control"   name="productId"   [(ngModel)]="product.productId" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Product Name:</label></td>
+                        <td><input type="text" formControlName="productName" [class.is-invalid] = "editProductForm.get('productName').invalid && editProductForm.get('productName').touched" class="form-control" name="productName" [(ngModel)]="product.productName" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Product Code:</label></td>
+                        <td><input type="text" formControlName= "productCode"  [class.is-invalid] = "editProductForm.get('productCode').invalid && editProductForm.get('productCode').touched" class="form-control" name="productCode" [(ngModel)]="product.productCode" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Release Date:</label></td>
+                        <td><input type="text"  formControlName="releaseDate" name="releaseDate" [(ngModel)]="product.releaseDate" class="form-control" [class.is-invalid] = "editProductForm.get('releaseDate').invalid && editProductForm.get('releaseDate').touched" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Product Description:</label></td>
+                        <td><input type="text" formControlName="description" name="description" [(ngModel)]="product.description" class="form-control" [class.is-invalid] = "editProductForm.get('description').invalid && editProductForm.get('description').touched" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Product Price:</label></td>
+                        <td><input type="number" formControlName= "price" name="price" [(ngModel)]="product.price" class="form-control" [class.is-invalid] = "editProductForm.get('price').invalid && editProductForm.get('price').touched" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Product Star Rating:</label></td>
+                        <td><input type="number"  formControlName= "starRating" name="starRating" [(ngModel)]="product.starRating" class="form-control" [class.is-invalid] = "editProductForm.get('starRating').invalid && editProductForm.get('starRating').touched" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Product Image:</label></td>
+                        <td><input type="text" formControlName= "imageUrl" name="imageUrl" [(ngModel)]="product.imageUrl" class="form-control" [class.is-invalid] = "editProductForm.get('imageUrl').invalid && editProductForm.get('imageUrl').touched" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>    <button type="submit" [disabled]='editProductForm.invalid' class="btn btn-success">Save</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+   </form>
+</div>
